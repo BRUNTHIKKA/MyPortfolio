@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Brunthikka's Portfolio</title>
+    <link rel="icon" type="image/png" href="./images/tab-icon.png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="./styles/all.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50"> 
+
+      <!-- Navigation Bar -->
+      <nav id="navbar" class="sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-6 flex items-center justify-between">
+          <div class="text-2xl font-bold logo-text">
+            Brunthikka<span class="logo-text-2">.</span>
+          </div>
+          <div class="hidden md:flex space-x-4">
+            <a href="#home" data-target="home" class="nav-link active">Home</a>
+            <a href="#about" data-target="about" class="nav-link">About</a>
+            <a href="#skills" data-target="skills" class="nav-link">Skills</a>
+            <a href="#projects" data-target="projects" class="nav-link">Projects</a>
+            <a href="#contact" data-target="contact" class="nav-link">Contact</a>
+          </div>
+          <div class="md:hidden">
+            <button class="focus:outline-none text-gray-500">
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="sections-container">
+
+      <!-- Home Section -->
+      <section id="home" class="home-section section section-1 section-top text-white flex items-center justify-center">
+        <div class="text-center">
+          <h1 class="text-6xl font-bold">
+            Hello<span class="color-dot">.</span>
+          </h1>
+          <h2 class="text-4xl mt-4 big-text">I'm a Mobile App Developer<span class="text-blue-300"></span></h2>
+        </div>
+      </section>
+  
+      <!-- About Section -->
+      <section id="about" class="about-section section section-2 section-mid py-20">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row items-center">
+            <img src="./images/profile-pic.jpeg" class="w-full md:w-1/3 h-auto rounded-full" alt="Profile Picture" />
+            <div class="m-8 md:mt-0 md:ml-8 px-12">
+              <h2 class="text-3xl font-bold mb-4">About Me</h2>
+              
+              <p class="text-gray-200 leading-relaxed mb-8">
+                Hi, I'm Brunthikka,
+              </p>
+              <p class="text-gray-200 leading-relaxed mb-8">
+                As a passionate Mobile App Developer, I bring extensive experience in HTML & CSS, JavaScript, Flutter, and React Native, utilizing tools such as Android Studio and Figma to create user-friendly, cross-platform applications. My proficiency in backend technologies like Python and MySQL allows me to deliver complete, efficient solutions that cater to modern mobile development standards. I'm committed to continuous learning and staying current with evolving technologies, always striving to expand my skill set.  
+              </p>
+              <p class="text-gray-200 leading-relaxed mb-8">
+                I am currently exploring advanced mobile frameworks and refining my design and development processes to create seamless, high-performance mobile experiences. My dedication to backend integration ensures that I can build robust and scalable applications, capable of tackling complex challenges with innovative, forward-thinking solutions.
+              </p>
+
+              <div class="mt-12">
+                <a href="./resume.pdf" target="_blank" download class="inline-block bg-blue-500 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-blue-600">Download My Resume</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+  
+      <!-- Skills Section -->
+      <section id="skills" class="skills-section section section-3 section-mid py-20">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl font-bold mb-8">Skills</h2>
+          <ul class="flex flex-wrap flex-col justify-center gap-4">
+            <li class="skill">HTML & CSS</li>
+            <li class="skill">JavaScript</li>
+            <li class="skill">Flutter</li>
+            <li class="skill">React Native</li>
+            <li class="skill">Python</li>
+            <li class="skill">MySQL</li>
+            <li class="skill">Figma</li>
+            <li class="skill">Android Studio</li>
+          </ul>
+        </div>
+      </section>
+  
+      <!-- Projects Section -->
+      <section id="projects" class="projects-section section section-4 section-mid py-20">
+        <div class="container mx-auto px-4">
+          <!-- Professional Projects -->
+          <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+          <div class="grid md:grid-cols-1 gap-3 mb-16 justify-center">
+  
+            <!-- Project 1 -->
+            <div class="project px-16 py-12 rounded-lg shadow-lg">
+              <h3 class="text-xl font-bold mb-8">Donation App</h3>
+              <p class="text-gray-200 mb-6">Developed a Flutter-based app connecting donors with recipients who are in need of books and tools, facilitating efficient donation requests and fulfillment.</p>
+              <h4 class="text-lg font-semibold">Tools & Technologies:</h4>
+              <ul class="flex flex-wrap gap-2 my-6">
+                <li class="bg-blue-500 text-white py-1 px-3 rounded-full">Flutter</li>
+              </ul>
+              <h4 class="text-lg font-semibold mb-2">Responsibilities:</h4>
+              <ul class="list-disc ml-4 text-gray-200">
+                <li>Created a "Request Donation" page where users can specify the books and tools they need, along with the required quantity.</li>
+                <li>Developed the "My Request" page for users to track, edit, and update their donation requests.</li>
+                <li>Designed the "Related Donations" page, displaying details of donors and their contributions.</li>
+                <li>Built an "Add Donation" page where donors can specify the type, quantity, and collection preferences of the items they wish to donate.</li>
+                <li>Implemented the "My Donations" page for tracking, editing, and updating users’ donation history.</li>
+              </ul>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project px-16 py-12 rounded-lg shadow-lg">
+              <h3 class="text-xl font-bold mb-8">School Management System</h3>
+              <p class="text-gray-200 mb-6">Developed a comprehensive app for school staff and parents using Flutter, enabling easy access to student information, club details, and academic records.</p>
+              <h4 class="text-lg font-semibold">Tools & Technologies:</h4>
+              <ul class="flex flex-wrap gap-2 my-6">
+                <li class="bg-blue-500 text-white py-1 px-3 rounded-full">Flutter</li>
+              </ul>
+              <h4 class="text-lg font-semibold mb-2">Responsibilities:</h4>
+              <ul class="list-disc ml-4 text-gray-200">
+                <li>Developed a "Student Details" page for staff to view student information, including timetable, results, and exam fee details.</li>
+                <li>Created the "Club Details" page where staff can manage club names and positions associated with each club.</li>
+                <li>Built the "Children’s Details" page for parents to access individual child information, including teachers for each subject and the timetable.</li>
+                <li>Designed the "Results, Attendance, and Payment Details" page, allowing parents to search using criteria such as registration number, grade, term, and view their child’s results, attendance, and payment information.</li>
+              </ul>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project px-16 py-12 rounded-lg shadow-lg">
+              <h3 class="text-xl font-bold mb-8">Nallathu - Advertisement Platform</h3>
+              <p class="text-gray-200 mb-6">Developed a user-friendly advertisement platform using Flutter, allowing users to browse, list, and manage product advertisements while providing easy communication with sellers.</p>
+              <h4 class="text-lg font-semibold">Tools & Technologies:</h4>
+              <ul class="flex flex-wrap gap-2 my-6">
+                <li class="bg-blue-500 text-white py-1 px-3 rounded-full">Flutter</li>
+              </ul>
+              <h4 class="text-lg font-semibold mb-2">Responsibilities:</h4>
+              <ul class="list-disc ml-4 text-gray-200">
+                <li>Designed the "Home Screen" with product images, allowing users to browse products by category and view detailed information by selecting individual products.</li>
+                <li>Implemented the "My Product" page where users can view their listings, transaction history, and add new products with seller and product details.</li>
+                <li>Created the "Favorites" page for users to easily access their favorite products.</li>
+                <li>Developed the "About Us" page, enabling users to contact sellers via call, email, or feedback submission.</li>
+              </ul>
+            </div>
+  
+          </div>          
+        </div>
+      </section>
+  
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section section section-5 section-bottom py-20">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
+                        
+          <p class="text-gray-200 leading-relaxed mb-8">
+            Let’s connect if you’re looking for someone who thrives on innovation and continuous learning in mobile development!
+          </p>
+          
+          <!-- Email -->
+          <div class="email mb-4">
+            <a href="mailto:brunthikka@example.com" class="inline-block text-blue-500 text-lg font-semibold py-3 px-6 rounded-lg hover:text-blue-600">
+              <i class="fas fa-envelope"></i> brunthikka@example.com
+            </a>
+          </div>
+          
+          <!-- Phone -->
+          <div class="phone">
+            <a href="tel:+1234567890" class="inline-block text-blue-500 text-lg font-semibold py-3 px-6 rounded-lg hover:text-blue-600">
+              <i class="fas fa-phone"></i> +1 234 567 890
+            </a>
+          </div>
+        </div>
+
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/kamalshanthselvarajah" target="_black" class="linkedin"><i class="fab fa-linkedin"></i></a> 
+          <a href="https://github.com/kamalshanth163" target="_black" class="github"><i class="fab fa-github"></i></a>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-6">
+      <div class="container mx-auto px-4 text-center text-gray-200">
+        <p>&copy; 2024 Brunthikka. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/all.min.js"></script>
+    <script src="./scripts/jquery.3.4.1.js"></script>
+
+  </body>
+
+</html>

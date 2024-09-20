@@ -1,0 +1,201 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+}
+
+header {
+  background: #000 !important;
+  padding: 20px 0px;
+}
+
+body {
+  background: #000;
+  background: url("../images/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.big-text {
+  font-size: 120px !important;
+}
+
+.logo-text {
+  color: white;
+}
+
+.logo-text-2 {
+  color: #6060f3;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #6060f3;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #7a7aff;
+}
+
+h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 60px !important;
+  padding: 30px 0;
+  letter-spacing: 20px;
+  line-height: 1 !important;
+  word-break: break-word;
+  opacity: 1;
+}
+
+h3 {
+  font-size: 30px !important;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 100;
+  color: white !important;
+}
+
+.sections-container {
+  width: 80%;
+  align-content: center;
+  margin: 0px auto;
+}
+
+.section {
+  background: none !important;
+  opacity: 0.9;
+  padding: 80px;
+  width: 100%;
+  min-height: 80vh;
+  margin: 20px auto;  
+  border-radius: 30px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+section {
+  background: none !important;
+  opacity: 0.9;
+  padding: 80px;
+  width: 100%;
+  min-height: 80vh;
+  margin: 20px auto;  
+  border-radius: 30px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.section-1 {
+  background: none;
+}
+.section-2 {
+  background: url("../images/bg-section-2.png") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+.section-3 {
+  background: none;
+}
+.section-4 {
+  background: none;
+}
+.section-5 {
+  background: url("../images/bg-section-5.png") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.color-dot {
+  color: #6060f3;
+}
+
+.bg-blue-500 {
+  background: #5151dc;
+}
+
+.bg-blue-500:hover {
+  background: #6060f3;
+}
+
+.skill {
+  background: rgb(23, 23, 23);
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+.skill:hover {
+  background: rgb(34, 34, 34);
+}
+
+.project {
+  background: #202020bb;
+  color: white !important;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.contact-section {
+  align-content: center;
+}
+
+.contact-section .email a {
+  color: white;
+  font-size: 30px;
+}
+
+.contact-section .email a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.contact-section .phone a {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
+
+.contact-section .phone a:hover {
+  color: rgb(255, 255, 255);
+}
+
+footer {
+  background: none;
+  padding: 100px 0px !important;
+}
+
+.social-links {
+  background: none;
+  padding: 20px;
+}
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: #111;
+  font-size: 60px;
+}
+.social-links a {
+  color: rgb(233, 233, 233);
+}
+.social-links a:hover {
+  color: rgb(255, 255, 255);
+}
