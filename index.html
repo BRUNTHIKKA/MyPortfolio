@@ -1,279 +1,326 @@
 <!DOCTYPE html>
 
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brunthikka G.</title>
-    <link rel="icon" type="image/png" href="./images/tab-icon.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./tailwind.config.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet" />
-  </head>
 
-  <body class="overflow-x-hidden font-Outfit leading-8 dark:text-white bg-light-gradient dark:bg-dark-gradient">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brunthikka G.</title>
+  <link rel="icon" type="image/png" href="./images/tab-icon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet" />
+</head>
 
-    <!-- Nav secion -->
-    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
-      <div class="text-2xl font-bold logo-text">
-        Brunthikka<span class="text-[#6060f3]">.</span>
+<body class="overflow-x-hidden font-Outfit leading-8 dark:text-white bg-light-gradient dark:bg-dark-gradient">
+
+  <!-- Nav secion -->
+  <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+    <div class="text-2xl font-bold logo-text">
+      Brunthikka<span class="text-[#6060f3]">.</span>
+    </div>
+
+    <div class="flex-1 flex justify-center">
+      <ul
+        class="hidden md:flex items-center gap-6 lg:gap-20 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/50 dark:bg-transparent">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact me</a></li>
+      </ul>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <button onclick="toggleTheme()">
+        <img src="./images/moon_icon.png" alt="" class="w-6 dark:hidden" />
+        <img src="./images/sun_icon.png" alt="" class="w-6 hidden dark:block" />
+      </button>
+      <a href="#contact"
+        class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50">
+        Contact
+        <img src="./images/arrow-icon.png" alt="" class="w-3 dark:hidden" />
+        <img src="./images/arrow-icon-dark.png" alt="" class="w-3 hidden dark:block" />
+      </a>
+      <button class="block md:hidden ml-3" onclick="openMenu()">
+        <img src="./images/menu-black.png" alt="" class="w-6 dark:hidden" />
+        <img src="./images/menu-white.png" alt="" class="w-6 hidden dark:block" />
+      </button>
+    </div>
+
+    <!-- ----- Mobile menu ------  -->
+    <ul id="sideMenu"
+      class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-dark-gradient bg-light-gradient dark:text-white">
+      <div class="absolute right-6 top-6" onclick="closeMenu()">
+        <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden" />
+        <img src="./images/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block" />
       </div>
-    
-      <div class="flex-1 flex justify-center">
-        <ul class="hidden md:flex items-center gap-6 lg:gap-20 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/50 dark:bg-transparent">
-          <li><a href="#top">Home</a></li>
-          <li><a href="#about">About me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact me</a></li>
+      <li><a href="#top" onclick="closeMenu()">Home</a></li>
+      <li><a href="#about" onclick="closeMenu()">About me</a></li>
+      <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
+    </ul>
+  </nav>
+
+  <!-- ------ Header --------------  -->
+  <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 pt-60">
+    <img src="./images/profile-img.png" alt="" class="rounded-full w-32" />
+    <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
+      Hi! I'm Brunthikka
+      <img src="./images/hand-icon.png" alt="" class="w-6" />
+    </h3>
+    <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
+      Full Stack Developer based in Sri Lanka
+    </h1>
+    <p class="max-w-2xl mx-auto font-Ovo">
+      Passionate full-stack developer, skilled in Next.js,React, .NET, Node.js, Express.js, PostgreSQL, MongoDB, and
+      more, building scalable web applications with seamless frontend and backend integration.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+      <a href="#contact"
+        class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#da7d20] to-[#b820e6] text-white flex items-center gap-2 dark:border-transparent">
+        Contact me
+        <img src="./images/right-arrow-white.png" alt="" class="w-4" />
+      </a>
+      <a href="./Brunthikka's CV.pdf" target="_blank" download
+        class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black">
+        My resume <img src="./images/download-icon.png" alt="" class="w-4" />
+      </a>
+    </div>
+  </div>
+
+
+  <!-- ------------ About me -----------  -->
+  <div id="about" class="w-full px-[12%] py-60 pb-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg font-Ovo">Introduction</h4>
+    <h2 class="text-center text-5xl font-Ovo">About me</h2>
+    <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-4">
+      <div class="max-w-max mx-auto relative">
+        <img src="./images/user-image.jpeg" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none" />
+      </div>
+      <div class="flex-1">
+        <p class="mb-10 max-w-2xl font-Ovo">
+          I am committed to continuous learning and staying updated with the latest technologies, refining my
+          development processes to build scalable, secure, and efficient web applications. My ability to integrate
+          frontend and backend
+          technologies ensures the delivery of complete, end-to-end solutions that meet modern web standards.
+        </p>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
+          <li
+            class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+            <img src="./images/code-icon.png" alt="" class="w-7 mt-3 dark:hidden" />
+            <img src="./images/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block" />
+            <h3 class="my-4 font-semibold text-gray-700 dark:text-white font-Ovo">
+              Technologies
+            </h3>
+            <p class="text-gray-600 text-sm dark:text-white/80 my-2 font-Ovo">
+              HTML, CSS, JavaScript
+            </p>
+            <p class="text-gray-600 text-sm dark:text-white/80 my-2 font-Ovo">
+              Next.jsReact, .NET, NodeJS, Express, PostgreSQL, MongoDB
+            </p>
+            <p class="text-gray-600 text-sm dark:text-white/80 my-2 font-Ovo">
+              Flutter, MySQL
+            </p>
+            <p class="text-gray-600 text-sm dark:text-white/80 my-2 font-Ovo">
+              Git, Android Studio, Figma
+            </p>
+          </li>
+          <li
+            class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+            <img src="./images/edu-icon.png" alt="" class="w-7 mt-3 dark:hidden" />
+            <img src="./images/edu-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block" />
+            <h3 class="my-4 font-semibold text-gray-700 dark:text-white font-Ovo">
+              Education
+            </h3>
+            <p class="text-gray-600 text-sm dark:text-white/80 my-2 font-Ovo">
+              BEng (Hons) Software Engineering (Top-up) - London Metropolitan University
+            </p>
+            <p class="text-gray-600 text-sm dark:text-white/80 my-2 font-Ovo">
+              NDT Information Technology - Institute of Technology University of Moratuwa
+            </p>
+          </li>
+        </ul>
+        <h4 class="my-6 text-gray-700 font-Ovo dark:text-white/80">
+          Tools I use
+        </h4>
+        <ul class="flex items-center gap-3 sm:gap-5">
+          <li
+            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+            <img src="./images/vscode.png" alt="" class="w-5 sm:w-7" />
+          </li>
+          <li
+            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+            <img src="./images/git.png" alt="" class="w-5 sm:w-7" />
+          </li>
+          <li
+            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+            <img src="./images/mongodb.png" alt="" class="w-5 sm:w-7" />
+          </li>
+          <li
+            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+            <img src="./images/figma.png" alt="" class="w-5 sm:w-7" />
+          </li>
         </ul>
       </div>
-    
-      <div class="flex items-center gap-4">
-        <button onclick="toggleTheme()">
-          <img src="./images/moon_icon.png" alt="" class="w-6 dark:hidden" />
-          <img src="./images/sun_icon.png" alt="" class="w-6 hidden dark:block" />
-        </button>
-        <a href="#contact" class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50">
-          Contact
-          <img src="./images/arrow-icon.png" alt="" class="w-3 dark:hidden" />
-          <img src="./images/arrow-icon-dark.png" alt="" class="w-3 hidden dark:block" />
-        </a>
-        <button class="block md:hidden ml-3" onclick="openMenu()">
-          <img src="./images/menu-black.png" alt="" class="w-6 dark:hidden" />
-          <img src="./images/menu-white.png" alt="" class="w-6 hidden dark:block" />
-        </button>
-      </div>
-    
-      <!-- ----- Mobile menu ------  -->
-      <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-dark-gradient bg-light-gradient dark:text-white">
-        <div class="absolute right-6 top-6" onclick="closeMenu()">
-          <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden" />
-          <img src="./images/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block" />
-        </div>
-        <li><a href="#top" onclick="closeMenu()">Home</a></li>
-        <li><a href="#about" onclick="closeMenu()">About me</a></li>
-        <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
-      </ul>
-    </nav>
+    </div>
+  </div>
 
-    <!-- ------ Header --------------  -->
-    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 pt-60">
-      <img src="./images/profile-img.png" alt="" class="rounded-full w-32" />
-      <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
-        Hi! I'm Brunthikka
-        <img src="./images/hand-icon.png" alt="" class="w-6" />
-      </h3>
-      <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
-        Full Stack Developer based in Sri Lanka
-      </h1>
-      <p class="max-w-2xl mx-auto font-Ovo">
-        Passionate full-stack developer, skilled in React, Node.js, Express.js, MongoDB, and more, building scalable web applications with seamless frontend and backend integration.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
-        <a href="#contact" class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#da7d20] to-[#b820e6] text-white flex items-center gap-2 dark:border-transparent">
-          Contact me
-          <img src="./images/right-arrow-white.png" alt="" class="w-4" />
-        </a>
-        <a href="./Brunthikka's CV.pdf" target="_blank" download class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black">
-          My resume <img src="./images/download-icon.png" alt="" class="w-4" />
-        </a>
+
+
+  <!-- ----------- Professional projects ---------  -->
+  <div id="projects" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h2 class="text-center text-5xl font-Ovo">Professional projects</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+      I have developed various web and mobile applications as professional projects using modern technologies, focusing
+      on clean architecture and user experience.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+
+
+
+      <!-- Nalladhu -->
+      <div
+        class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white dark:border-white/50">
+        <img src="./images/mobile-icon.png" alt="" class="w-10" />
+        <h3 class="text-xl font-bold my-4 font-Ovo dark:text-white">Nallathu - Advertisement Platform</h3>
+        <p class="text-gray-600 mb-6 font-Ovo dark:text-white/80">Developed a user-friendly advertisement platform using
+          Flutter, allowing users to browse, list, and manage product advertisements while providing easy communication
+          with sellers.</p>
+        <h4 class="text-lg font-semibold font-Ovo dark:text-white">Tools & Technologies:</h4>
+        <ul class="flex flex-wrap gap-2 my-6 font-Ovo">
+          <li class="bg-gray-500 text-white py-1 px-3 rounded-full">Flutter</li>
+        </ul>
+        <h4 class="text-lg font-semibold mb-2 font-Ovo dark:text-white">Responsibilities:</h4>
+        <ul class="list-disc ml-4 text-gray-600 text-sm font-Ovo dark:text-white/80">
+          <li>Designed the "Home Screen" with product images, allowing users to browse products by category and view
+            detailed information by selecting individual products.</li>
+          <li>Implemented the "My Product" page where users can view their listings, transaction history, and add new
+            products with seller and product details.</li>
+          <li>Created the "Favorites" page for users to easily access their favorite products.</li>
+          <li>Developed the "About Us" page, enabling users to contact sellers via call, email, or feedback submission.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Donation App -->
+      <div
+        class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white dark:border-white/50">
+        <img src="./images/mobile-icon.png" alt="" class="w-10" />
+        <h3 class="text-xl font-bold my-4 font-Ovo dark:text-white">Donation App</h3>
+        <p class="text-gray-600 mb-6 font-Ovo dark:text-white/80">Developed a Flutter-based app connecting donors with
+          recipients who are in need of books and tools, facilitating efficient donation requests and fulfillment.</p>
+        <h4 class="text-lg font-semibold font-Ovo dark:text-white">Tools & Technologies:</h4>
+        <ul class="flex flex-wrap gap-2 my-6 font-Ovo">
+          <li class="bg-gray-500 text-white py-1 px-3 rounded-full">Flutter</li>
+        </ul>
+        <h4 class="text-lg font-semibold mb-2 font-Ovo dark:text-white">Responsibilities:</h4>
+        <ul class="list-disc ml-4 text-gray-600 text-sm font-Ovo dark:text-white/80">
+          <li>Created a "Request Donation" page where users can specify the books and tools they need, along with the
+            required quantity.</li>
+          <li>Developed the "My Request" page for users to track, edit, and update their donation requests.</li>
+          <li>Designed the "Related Donations" page, displaying details of donors and their contributions.</li>
+          <li>Built an "Add Donation" page where donors can specify the type, quantity, and collection preferences of
+            the items they wish to donate.</li>
+          <li>Implemented the "My Donations" page for tracking, editing, and updating users’ donation history.</li>
+        </ul>
+      </div>
+
+      <!-- School Management System -->
+      <div
+        class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white dark:border-white/50">
+        <img src="./images/mobile-icon.png" alt="" class="w-10" />
+        <h3 class="text-xl font-bold my-4 font-Ovo dark:text-white">School Management System</h3>
+        <p class="text-gray-600 mb-6 font-Ovo dark:text-white/80">Developed a comprehensive app for school staff and
+          parents using Flutter, enabling easy access to student information, club details, and academic records.</p>
+        <h4 class="text-lg font-semibold font-Ovo dark:text-white">Tools & Technologies:</h4>
+        <ul class="flex flex-wrap gap-2 my-6 font-Ovo">
+          <li class="bg-gray-500 text-white py-1 px-3 rounded-full">Flutter</li>
+        </ul>
+        <h4 class="text-lg font-semibold mb-2 font-Ovo dark:text-white">Responsibilities:</h4>
+        <ul class="list-disc ml-4 text-gray-600 text-sm font-Ovo dark:text-white/80">
+          <li>Developed a "Student Details" page for staff to view student information, including timetable, results,
+            and exam fee details.</li>
+          <li>Created the "Club Details" page where staff can manage club names and positions associated with each club.
+          </li>
+          <li>Built the "Children’s Details" page for parents to access individual child information, including teachers
+            for each subject and the timetable.</li>
+          <li>Designed the "Results, Attendance, and Payment Details" page, allowing parents to search using criteria
+            such as registration number, grade, term, and view their child’s results, attendance, and payment
+            information.</li>
+        </ul>
+      </div>
+
+      <!-- Home Service App -->
+      <div
+        class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white dark:border-white/50">
+        <img src="./images/mobile-icon.png" alt="" class="w-10" />
+        <h3 class="text-xl font-bold my-4 font-Ovo dark:text-white">Home Service App</h3>
+        <p class="text-gray-600 mb-6 font-Ovo dark:text-white/80">Home Service App is a mobile application that offers
+          essential household services in one place. From carpentry, electrical work, plumbing, cleaning, to AC
+          maintenance, skilled professionals provide quick, reliable solutions right at your doorstep, saving time and
+          effort.</p>
+        <h4 class="text-lg font-semibold font-Ovo dark:text-white">Tools & Technologies:</h4>
+        <ul class="flex flex-wrap gap-2 my-6 font-Ovo">
+          <li class="bg-gray-500 text-white py-1 px-3 rounded-full">Flutter</li>
+        </ul>
+        <h4 class="text-lg font-semibold mb-2 font-Ovo dark:text-white">Responsibilities:</h4>
+        <ul class="list-disc ml-4 text-gray-600 text-sm font-Ovo dark:text-white/80">
+          <li>Developed service booking modules for carpentry, electrical, plumbing, and cleaning services.</li>
+          <li>Implemented service provider listings with ratings expertise filters to help users choose professionals.
+          </li>
+          <li>Built service history tracking and arrival time estimation features.
+          </li>
+          <li> Integrated multi-payment support, ensuring transparency and secure transactions.
+          </li>
+        </ul>
+      </div>
+
+
+
+    </div>
+  </div>
+  <!-- ----------- Personal projects ---------  -->
+  <div id="projects" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h2 class="text-center text-5xl font-Ovo">Personal projects</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+      I have developed various web and mobile applications as personal projects using modern technologies, focusing on
+      clean architecture and user experience.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+      <!-- Expense Tracker -->
+      <div
+        class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white dark:border-white/50">
+        <img src="./images/web-icon.png" alt="" class="w-10" />
+        <h3 class="text-xl font-bold my-4 font-Ovo dark:text-white">Expense Tracker</h3>
+        <p class="text-gray-600 mb-6 font-Ovo dark:text-white/80">A web-based expense tracking application to manage
+          personal finances efficiently.</p>
+        <h4 class="text-lg font-semibold font-Ovo dark:text-white">Tools & Technologies:</h4>
+        <ul class="flex flex-wrap gap-2 my-6 font-Ovo">
+          <li class="bg-gray-500 text-white py-1 px-3 rounded-full">React</li>
+          <li class="bg-gray-500 text-white py-1 px-3 rounded-full">Node.js</li>
+          <li class="bg-gray-500 text-white py-1 px-3 rounded-full">MongoDB</li>
+        </ul>
+        <h4 class="text-lg font-semibold mb-2 font-Ovo dark:text-white">Responsibilities:</h4>
+        <ul class="list-disc ml-4 text-gray-600 text-sm font-Ovo dark:text-white/80">
+          <li>Designed and developed a user-friendly dashboard to display expense summaries, including total income,
+            expenses, and net savings.</li>
+          <li>Implemented CRUD (Create, Read, Update, Delete) functionality for managing expense entries, allowing users
+            to add, edit, or delete transactions.</li>
+          <li>Integrated data visualization using charts and graphs to provide users with a clear overview of their
+            spending patterns over time.</li>
+          <li>Developed a secure authentication system using JWT (JSON Web Tokens) to protect user data and ensure
+            privacy.</li>
+          <li>Created a responsive and mobile-friendly design using Tailwind CSS to ensure seamless usability across
+            devices.</li>
+          <li>Deployed the application on a cloud platform (e.g., Vercel or Netlify) for public access and scalability.
+          </li>
+        </ul>
       </div>
     </div>
-
-
-    <!-- ------------ About me -----------  -->
-    <div id="about" class="w-full px-[12%] py-60 pb-10 scroll-mt-20">
-      <h4 class="text-center mb-2 text-lg font-Ovo">Introduction</h4>
-      <h2 class="text-center text-5xl font-Ovo">About me</h2>
-      <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-4">
-        <div class="max-w-max mx-auto relative">
-          <img src="./images/user-image.jpeg" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none" />
-        </div>
-        <div class="flex-1">
-          <p class="mb-10 max-w-2xl font-Ovo">
-            I am committed to continuous learning and staying updated with the latest technologies, refining my development processes to build scalable, secure, and efficient web applications. My ability to integrate frontend and backend
-            technologies ensures the delivery of complete, end-to-end solutions that meet modern web standards.
-          </p>
-          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
-            <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
-              <img src="./images/code-icon.png" alt="" class="w-7 mt-3 dark:hidden" />
-              <img src="./images/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block" />
-              <h3 class="my-4 font-semibold text-gray-700 dark:text-white font-Ovo">
-                Technologies
-              </h3>
-              <p class="text-gray-600 text-sm dark:text-white/80 my-2 font-Ovo">
-                HTML, CSS, JavaScript
-              </p>
-              <p class="text-gray-600 text-sm dark:text-white/80 my-2 font-Ovo">
-                Next.jsReact, .NET, NodeJS, Express, PostgreSQL, MongoDB
-              </p>
-              <p class="text-gray-600 text-sm dark:text-white/80 my-2 font-Ovo">
-                Flutter, MySQL
-              </p>
-              <p class="text-gray-600 text-sm dark:text-white/80 my-2 font-Ovo">
-                Git, Android Studio, Figma
-              </p>
-            </li>
-            <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
-              <img src="./images/edu-icon.png" alt="" class="w-7 mt-3 dark:hidden" />
-              <img src="./images/edu-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block" />
-              <h3 class="my-4 font-semibold text-gray-700 dark:text-white font-Ovo">
-                Education
-              </h3>
-              <p class="text-gray-600 text-sm dark:text-white/80 my-2 font-Ovo">
-                BEng (Hons) Software Engineering (Top-up) - London Metropolitan University 
-              </p>
-              <p class="text-gray-600 text-sm dark:text-white/80 my-2 font-Ovo">
-                NDT Information Technology - Institute of Technology University of Moratuwa
-              </p>
-            </li>
-          </ul>
-          <h4 class="my-6 text-gray-700 font-Ovo dark:text-white/80">
-            Tools I use
-          </h4>
-          <ul class="flex items-center gap-3 sm:gap-5">
-            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
-              <img src="./images/vscode.png" alt="" class="w-5 sm:w-7" />
-            </li>
-            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
-              <img src="./images/git.png" alt="" class="w-5 sm:w-7" />
-            </li>
-            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
-              <img src="./images/mongodb.png" alt="" class="w-5 sm:w-7" />
-            </li>
-            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
-              <img src="./images/figma.png" alt="" class="w-5 sm:w-7" />
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    
-
-    <!-- ----------- Professional projects ---------  -->
-    <div id="projects" class="w-full px-[12%] py-10 scroll-mt-20">
-      <h2 class="text-center text-5xl font-Ovo">Professional projects</h2>
-      <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-        I have developed various web and mobile applications as professional projects using modern technologies, focusing on clean architecture and user experience.      
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
-
-        
-
-        <!-- Nalladhu -->
-        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white dark:border-white/50">
-          <img src="./images/mobile-icon.png" alt="" class="w-10" />
-          <h3 class="text-xl font-bold my-4 font-Ovo dark:text-white">Nallathu - Advertisement Platform</h3>
-          <p class="text-gray-600 mb-6 font-Ovo dark:text-white/80">Developed a user-friendly advertisement platform using Flutter, allowing users to browse, list, and manage product advertisements while providing easy communication with sellers.</p>
-          <h4 class="text-lg font-semibold font-Ovo dark:text-white">Tools & Technologies:</h4>
-          <ul class="flex flex-wrap gap-2 my-6 font-Ovo">
-            <li class="bg-gray-500 text-white py-1 px-3 rounded-full">Flutter</li>
-          </ul>
-          <h4 class="text-lg font-semibold mb-2 font-Ovo dark:text-white">Responsibilities:</h4>
-          <ul class="list-disc ml-4 text-gray-600 text-sm font-Ovo dark:text-white/80">
-            <li>Designed the "Home Screen" with product images, allowing users to browse products by category and view detailed information by selecting individual products.</li>
-            <li>Implemented the "My Product" page where users can view their listings, transaction history, and add new products with seller and product details.</li>
-            <li>Created the "Favorites" page for users to easily access their favorite products.</li>
-            <li>Developed the "About Us" page, enabling users to contact sellers via call, email, or feedback submission.</li>
-          </ul>
-        </div>
-
-        <!-- Donation App -->
-        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white dark:border-white/50">
-          <img src="./images/mobile-icon.png" alt="" class="w-10" />
-          <h3 class="text-xl font-bold my-4 font-Ovo dark:text-white">Donation App</h3>
-          <p class="text-gray-600 mb-6 font-Ovo dark:text-white/80">Developed a Flutter-based app connecting donors with recipients who are in need of books and tools, facilitating efficient donation requests and fulfillment.</p>
-          <h4 class="text-lg font-semibold font-Ovo dark:text-white">Tools & Technologies:</h4>
-          <ul class="flex flex-wrap gap-2 my-6 font-Ovo">
-            <li class="bg-gray-500 text-white py-1 px-3 rounded-full">Flutter</li>
-          </ul>
-          <h4 class="text-lg font-semibold mb-2 font-Ovo dark:text-white">Responsibilities:</h4>
-          <ul class="list-disc ml-4 text-gray-600 text-sm font-Ovo dark:text-white/80">
-            <li>Created a "Request Donation" page where users can specify the books and tools they need, along with the required quantity.</li>
-            <li>Developed the "My Request" page for users to track, edit, and update their donation requests.</li>
-            <li>Designed the "Related Donations" page, displaying details of donors and their contributions.</li>
-            <li>Built an "Add Donation" page where donors can specify the type, quantity, and collection preferences of the items they wish to donate.</li>
-            <li>Implemented the "My Donations" page for tracking, editing, and updating users’ donation history.</li>
-          </ul>
-        </div>
-
-        <!-- School Management System -->
-        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white dark:border-white/50">
-          <img src="./images/mobile-icon.png" alt="" class="w-10" />
-          <h3 class="text-xl font-bold my-4 font-Ovo dark:text-white">School Management System</h3>
-          <p class="text-gray-600 mb-6 font-Ovo dark:text-white/80">Developed a comprehensive app for school staff and parents using Flutter, enabling easy access to student information, club details, and academic records.</p>
-          <h4 class="text-lg font-semibold font-Ovo dark:text-white">Tools & Technologies:</h4>
-          <ul class="flex flex-wrap gap-2 my-6 font-Ovo">
-            <li class="bg-gray-500 text-white py-1 px-3 rounded-full">Flutter</li>
-          </ul>
-          <h4 class="text-lg font-semibold mb-2 font-Ovo dark:text-white">Responsibilities:</h4>
-          <ul class="list-disc ml-4 text-gray-600 text-sm font-Ovo dark:text-white/80">
-            <li>Developed a "Student Details" page for staff to view student information, including timetable, results, and exam fee details.</li>
-            <li>Created the "Club Details" page where staff can manage club names and positions associated with each club.</li>
-            <li>Built the "Children’s Details" page for parents to access individual child information, including teachers for each subject and the timetable.</li>
-            <li>Designed the "Results, Attendance, and Payment Details" page, allowing parents to search using criteria such as registration number, grade, term, and view their child’s results, attendance, and payment information.</li>
-          </ul>
-        </div>
-
-        <!-- Home Service App -->
-        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white dark:border-white/50">
-          <img src="./images/mobile-icon.png" alt="" class="w-10" />
-          <h3 class="text-xl font-bold my-4 font-Ovo dark:text-white">Home Service App</h3>
-          <p class="text-gray-600 mb-6 font-Ovo dark:text-white/80">Home Service App is a mobile application that offers essential household services in one place. From carpentry, electrical work, plumbing, cleaning, to AC maintenance, skilled professionals provide quick, reliable solutions right at your doorstep, saving time and effort.</p>
-          <h4 class="text-lg font-semibold font-Ovo dark:text-white">Tools & Technologies:</h4>
-          <ul class="flex flex-wrap gap-2 my-6 font-Ovo">
-            <li class="bg-gray-500 text-white py-1 px-3 rounded-full">Flutter</li>
-          </ul>
-          <h4 class="text-lg font-semibold mb-2 font-Ovo dark:text-white">Responsibilities:</h4>
-          <ul class="list-disc ml-4 text-gray-600 text-sm font-Ovo dark:text-white/80">
-            <li>Developed service booking modules for carpentry, electrical, plumbing, and cleaning services.</li>
-            <li>Implemented service provider listings with ratings expertise filters to help users choose professionals.</li>
-            <li>Built service history tracking and arrival time estimation features.
-</li>
-            <li> Integrated multi-payment support, ensuring transparency and secure transactions.
-</li>
-          </ul>
-        </div>
-
-
-
-      </div>
-    </div>
-<!-- ----------- Personal projects ---------  -->
-    <div id="projects" class="w-full px-[12%] py-10 scroll-mt-20">
-      <h2 class="text-center text-5xl font-Ovo">Personal projects</h2>
-      <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-        I have developed various web and mobile applications as personal projects using modern technologies, focusing on clean architecture and user experience.      
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
-    <!-- Expense Tracker -->
-        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white dark:border-white/50">
-          <img src="./images/web-icon.png" alt="" class="w-10" />
-          <h3 class="text-xl font-bold my-4 font-Ovo dark:text-white">Expense Tracker</h3>
-          <p class="text-gray-600 mb-6 font-Ovo dark:text-white/80">A web-based expense tracking application to manage personal finances efficiently.</p>
-          <h4 class="text-lg font-semibold font-Ovo dark:text-white">Tools & Technologies:</h4>
-          <ul class="flex flex-wrap gap-2 my-6 font-Ovo">
-            <li class="bg-gray-500 text-white py-1 px-3 rounded-full">React</li>
-            <li class="bg-gray-500 text-white py-1 px-3 rounded-full">Node.js</li>
-            <li class="bg-gray-500 text-white py-1 px-3 rounded-full">MongoDB</li>
-          </ul>
-          <h4 class="text-lg font-semibold mb-2 font-Ovo dark:text-white">Responsibilities:</h4>
-          <ul class="list-disc ml-4 text-gray-600 text-sm font-Ovo dark:text-white/80">
-            <li>Designed and developed a user-friendly dashboard to display expense summaries, including total income, expenses, and net savings.</li>
-            <li>Implemented CRUD (Create, Read, Update, Delete) functionality for managing expense entries, allowing users to add, edit, or delete transactions.</li>
-            <li>Integrated data visualization using charts and graphs to provide users with a clear overview of their spending patterns over time.</li>
-            <li>Developed a secure authentication system using JWT (JSON Web Tokens) to protect user data and ensure privacy.</li>
-            <li>Created a responsive and mobile-friendly design using Tailwind CSS to ensure seamless usability across devices.</li>
-            <li>Deployed the application on a cloud platform (e.g., Vercel or Netlify) for public access and scalability.</li>
-          </ul>
-        </div>
-        </div>
     <!-- ----- Contact -------------  -->
     <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20">
       <h4 class="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
@@ -285,11 +332,18 @@
         <!------- Enter your web3 form access key below ------------>
         <input type="hidden" name="access_key" value="c3c3a874-c792-4a5b-9ec6-dc091bd675dd" />
         <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
-          <input type="text" placeholder="Enter your name" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required name="name" />
-          <input type="email" placeholder="Enter your email" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required name="email" />
+          <input type="text" placeholder="Enter your name"
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
+            required name="name" />
+          <input type="email" placeholder="Enter your email"
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
+            required name="email" />
         </div>
-        <textarea rows="6" placeholder="Enter your message" class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90" required name="message"></textarea>
-        <button class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:hover:bg-darkHover bg-gradient-to-r from-[#da7d20] to-[#b820e6]">
+        <textarea rows="6" placeholder="Enter your message"
+          class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90"
+          required name="message"></textarea>
+        <button
+          class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:hover:bg-darkHover bg-gradient-to-r from-[#da7d20] to-[#b820e6]">
           Submit now
           <img src="./images/right-arrow-white.png" alt="" class="w-4" />
         </button>
@@ -326,5 +380,6 @@
       </div>
     </div>
     <script src="./script.js"></script>
-  </body>
+</body>
+
 </html>
